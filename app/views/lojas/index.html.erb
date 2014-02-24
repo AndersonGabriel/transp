@@ -1,0 +1,31 @@
+<h1>Listing lojas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Endereco</th>
+      <th>Tel</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lojas.each do |loja| %>
+      <tr>
+        <td><%= loja.nome %></td>
+        <td><%= loja.endereco %></td>
+        <td><%= loja.tel %></td>
+        <td><%= link_to 'Show', loja %></td>
+        <td><%= link_to 'Edit', edit_loja_path(loja) %></td>
+        <td><%= link_to 'Excluir', loja, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Loja', new_loja_path %>

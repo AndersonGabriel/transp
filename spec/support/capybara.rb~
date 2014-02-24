@@ -2,5 +2,5 @@ require 'capybara/rails'
 require 'capybara/dsl'
 
 RSpec.configure do |C|
-  C.include Capybara::DSL, :example_group => { :file_path => /\bspec\/acceptance\//}
+  C.include Capybara::DSL, :example_group => { :file_path => /\bspec\/acceptance\// }
 end
