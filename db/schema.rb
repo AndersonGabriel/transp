@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140218225319) do
+ActiveRecord::Schema.define(version: 20140225235408) do
+
+  create_table "clientes", force: true do |t|
+    t.string   "nome"
+    t.string   "endereco"
+    t.string   "tel"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "lojas", force: true do |t|
     t.string   "nome"
@@ -20,5 +28,18 @@ ActiveRecord::Schema.define(version: 20140218225319) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "pedidos", force: true do |t|
+    t.string   "peso"
+    t.string   "dimensao"
+    t.string   "numero"
+    t.integer  "cliente_id"
+    t.integer  "loja_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "pedidos", ["cliente_id"], name: "index_pedidos_on_cliente_id"
+  add_index "pedidos", ["loja_id"], name: "index_pedidos_on_loja_id"
 
 end

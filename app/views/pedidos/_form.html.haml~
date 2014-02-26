@@ -1,0 +1,9 @@
+= semantic_form_for [@loja] do |form|
+  
+  = form.input :peso, :label => 'Peso'
+  = form.input :dimensao, :label => 'Dimensao'
+  = form.input :numero, :label => 'Numero'
+  = form.input :cliente, :member_label => :nome, :label => 'Cliente' 
+  = form.input :loja, :member_label => :nome, :label => 'Loja' 
+
+  = form.submit 'Salvar'

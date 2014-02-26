@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Peso:</strong>
+  <%= @pedido.peso %>
+</p>
+
+<p>
+  <strong>Dimensao:</strong>
+  <%= @pedido.dimensao %>
+</p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @pedido.numero %>
+</p>
+
+<p>
+  <strong>Cliente:</strong>
+  <%= @pedido.cliente.nome %>
+</p>
+
+<p>
+  <strong>Loja:</strong>
+  <%= @pedido.loja.nome %>
+</p>
+
+<%= link_to 'Edit', edit_pedido_path(@pedido) %> |
+<%= link_to 'Back', pedidos_path %>
