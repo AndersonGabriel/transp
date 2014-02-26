@@ -2,41 +2,39 @@
 
 require 'spec_helper'
 
-feature 'gerenciar pedido' do
+feature 'gerenciar remessa' do
 
-  scenario 'incluir pedido', :javascript => true do
+  scenario 'incluir remessa', :javascript => true do
 
-    cliente = FactoryGirl.create(:cliente, :nome => 'XXX')
-    loja = FactoryGirl.create(:loja, :nome => 'XXX')
+    pedido = FactoryGirl.create(:pedido, :numero => 'XXX')
+    
 
-    visit new_pedido_path
+    visit new_remessa_path
 
-    preencher_e_verificar_pedido
+    preencher_e_verificar_remessa
  
 
   end
 
-  scenario 'alterar pedido' do #, :js => true do
+  scenario 'alterar remessa' do #, :js => true do
 
-    cliente = FactoryGirl.create(:cliente, :nome => 'XXX')
-    loja = FactoryGirl.create(:loja, :nome => 'XXX')
-    pedido = FactoryGirl.create(:pedido, :cliente => cliente, :loja => loja)
+    pedido = FactoryGirl.create(:pedido, :numero => 'XXX')
+    remessa = FactoryGirl.create(:remessa, :pedido=> pedido)
     
-    visit edit_pedido_path(pedido)
+    visit edit_remessa_path(remessa)
 
-    preencher_e_verificar_pedido
+    preencher_e_verificar_remessa
 
 
 
   end
 
-   scenario 'excluir pedido' do #, :javascript => true do
+   scenario 'excluir remessa' do #, :javascript => true do
 
-       cliente = FactoryGirl.create(:cliente, :nome => 'XXX')
-       loja = FactoryGirl.create(:loja, :nome => 'XXX')
-       pedido = FactoryGirl.create(:pedido, :cliente => cliente, :loja => loja)
+       pedido = FactoryGirl.create(:pedido, :numero => 'XXX')
+       remessa = FactoryGirl.create(:remessa, :pedido=> pedido)
 
-        visit pedidos_path
+        visit remessas_path
 
         click_link 'Excluir'
 
@@ -44,22 +42,23 @@ feature 'gerenciar pedido' do
 
   end
 
-   def preencher_e_verificar_pedido
+   def preencher_e_verificar_remessa
 
-      fill_in 'Peso', :with => "10kg"
-      fill_in 'Dimensao', :with => "20x20cm"
-      fill_in 'Numero', :with => "123456789"
-      select 'XXX', :from => 'Cliente'
-      select 'XXX', :from => 'Loja'
+      fill_in 'Codigorastreio', :with => "DF123476BR"
+      fill_in 'Status', :with => "enviado"
+      fill_in 'Datapostagem', :with => "10/10/2013"
+      fill_in 'Previsaoentrega', :with => "13/10/2013"
+      select 'XXX', :from => 'Pedido'
+      
      
  
       click_button 'Salvar'
 
-      page.should have_content 'Peso: 10kg'
-      page.should have_content 'Dimensao: 20x20cm'
-      page.should have_content 'Numero: 123456789'
-      page.should have_content 'Cliente: XXX'
-      page.should have_content 'Loja: XXX'
+      page.should have_content 'Codigorastreio: DF123476BR'
+      page.should have_content 'Status: enviado'
+      page.should have_content 'Datapostagem 10/10/2013'
+      page.should have_content 'Previsaoentrega: 13/10/2013'
+      page.should have_content 'Pedido: XXX'
            
 
    end

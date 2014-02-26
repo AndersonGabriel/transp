@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Codigorastreio:</strong>
+  <%= @remessa.codigorastreio %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @remessa.status %>
+</p>
+
+<p>
+  <strong>Datapostagem:</strong>
+  <%= @remessa.datapostagem %>
+</p>
+
+<p>
+  <strong>Previsaoentrega:</strong>
+  <%= @remessa.previsaoentrega %>
+</p>
+
+<p>
+  <strong>Pedido:</strong>
+  <%= @remessa.pedido %>
+</p>
+
+<%= link_to 'Edit', edit_remessa_path(@remessa) %> |
+<%= link_to 'Back', remessas_path %>

@@ -1,0 +1,35 @@
+<h1>Listing remessas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Codigorastreio</th>
+      <th>Status</th>
+      <th>Datapostagem</th>
+      <th>Previsaoentrega</th>
+      <th>Pedido</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @remessas.each do |remessa| %>
+      <tr>
+        <td><%= remessa.codigorastreio %></td>
+        <td><%= remessa.status %></td>
+        <td><%= remessa.datapostagem %></td>
+        <td><%= remessa.previsaoentrega %></td>
+        <td><%= remessa.pedido %></td>
+        <td><%= link_to 'Show', remessa %></td>
+        <td><%= link_to 'Edit', edit_remessa_path(remessa) %></td>
+        <td><%= link_to 'Destroy', remessa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Remessa', new_remessa_path %>

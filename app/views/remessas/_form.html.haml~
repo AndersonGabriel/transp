@@ -1,0 +1,10 @@
+= semantic_form_for [@remessa] do |form|
+  
+  = form.input :codigorastreio, :label => 'Codigorastreio'
+  = form.input :status, :label => 'Status'
+  = form.input :datapostagem, :label => 'Datapostagem'
+  = form.input :previsaoentrega, :label => 'Previsaoentrega'
+  = form.input :pedido, :member_label => :numero, :label => 'Pedido' 
+  
+
+  = form.submit 'Salvar'
