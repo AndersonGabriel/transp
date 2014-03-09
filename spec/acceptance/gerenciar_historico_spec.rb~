@@ -54,7 +54,7 @@ feature 'gerenciar historico' do
       click_button 'Salvar'
 
       page.should have_content 'Evento: recusado'
-      page.should have_content 'Observacao: ausente'
+      page.should have_content 'Status: ausente'
       page.should have_content 'Data: 10/10/2013'
       page.should have_content 'Remessa: XXX'
            

@@ -1,0 +1,9 @@
+= semantic_form_for [@historico] do |form|
+  
+  = form.input :evento, :label => 'Evento'
+  = form.input :observacao, :label => 'Observacao'
+  = form.input :data, :label => 'Data'
+  = form.input :remessa, :member_label => :codigorastreio, :label => 'Remessa' 
+  
+
+  = form.submit 'Salvar'

@@ -1,4 +1,6 @@
 Transp::Application.routes.draw do
+  resources :historicos
+
   resources :remessas
 
   resources :pedidos
