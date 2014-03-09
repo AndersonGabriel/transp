@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Evento:</strong>
+  <%= @historico.evento %>
+</p>
+
+<p>
+  <strong>Observacao:</strong>
+  <%= @historico.observacao %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @historico.data %>
+</p>
+
+<p>
+  <strong>Remessa:</strong>
+  <%= @historico.remessa %>
+</p>
+
+<%= link_to 'Edit', edit_historico_path(@historico) %> |
+<%= link_to 'Back', historicos_path %>

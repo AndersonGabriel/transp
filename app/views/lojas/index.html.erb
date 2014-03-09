@@ -1,4 +1,4 @@
-<h1>Listing lojas</h1>
+<h1>Lista de lojas</h1>
 
 <table>
   <thead>
@@ -18,8 +18,8 @@
         <td><%= loja.nome %></td>
         <td><%= loja.endereco %></td>
         <td><%= loja.tel %></td>
-        <td><%= link_to 'Show', loja %></td>
-        <td><%= link_to 'Edit', edit_loja_path(loja) %></td>
+        <td><%= link_to 'Exibir', loja %></td>
+        <td><%= link_to 'Editar', edit_loja_path(loja) %></td>
         <td><%= link_to 'Excluir', loja, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Loja', new_loja_path %>
+<%= link_to 'Nova Loja', new_loja_path %>

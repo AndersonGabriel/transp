@@ -21,10 +21,10 @@
         <td><%= remessa.status %></td>
         <td><%= remessa.datapostagem %></td>
         <td><%= remessa.previsaoentrega %></td>
-        <td><%= remessa.pedido %></td>
+        <td><%= remessa.pedido.numero %></td>
         <td><%= link_to 'Show', remessa %></td>
         <td><%= link_to 'Edit', edit_remessa_path(remessa) %></td>
-        <td><%= link_to 'Destroy', remessa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Excluir', remessa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

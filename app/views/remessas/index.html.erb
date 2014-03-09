@@ -1,4 +1,4 @@
-<h1>Listing remessas</h1>
+<h1>Lista de remessas</h1>
 
 <table>
   <thead>
@@ -22,8 +22,8 @@
         <td><%= remessa.datapostagem %></td>
         <td><%= remessa.previsaoentrega %></td>
         <td><%= remessa.pedido.numero %></td>
-        <td><%= link_to 'Show', remessa %></td>
-        <td><%= link_to 'Edit', edit_remessa_path(remessa) %></td>
+        <td><%= link_to 'Exibir', remessa %></td>
+        <td><%= link_to 'Editar', edit_remessa_path(remessa) %></td>
         <td><%= link_to 'Excluir', remessa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Remessa', new_remessa_path %>
+<%= link_to 'Nova Remessa', new_remessa_path %>

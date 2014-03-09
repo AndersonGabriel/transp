@@ -1,0 +1,33 @@
+<h1>Listing historicos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Evento</th>
+      <th>Observacao</th>
+      <th>Data</th>
+      <th>Remessa</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @historicos.each do |historico| %>
+      <tr>
+        <td><%= historico.evento %></td>
+        <td><%= historico.observacao %></td>
+        <td><%= historico.data %></td>
+        <td><%= historico.remessa.codigorastreio %></td>
+        <td><%= link_to 'Show', historico %></td>
+        <td><%= link_to 'Edit', edit_historico_path(historico) %></td>
+        <td><%= link_to 'Excluir', historico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Historico', new_historico_path %>
