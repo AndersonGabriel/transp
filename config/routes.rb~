@@ -1,5 +1,9 @@
 Transp::Application.routes.draw do
+<<<<<<< HEAD
   get "home/index"
+  
+  root :to=> "home#index"
+
   resources :historicos
 
   resources :remessas

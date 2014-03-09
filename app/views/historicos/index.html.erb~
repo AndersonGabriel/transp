@@ -19,10 +19,17 @@
         <td><%= historico.evento %></td>
         <td><%= historico.observacao %></td>
         <td><%= historico.data %></td>
+<<<<<<< HEAD
         <td><%= historico.remessa.codigorastreio %></td>
         <td><%= link_to 'Show', historico %></td>
         <td><%= link_to 'Edit', edit_historico_path(historico) %></td>
         <td><%= link_to 'Excluir', historico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+=======
+        <td><%= historico.remessa %></td>
+        <td><%= link_to 'Show', historico %></td>
+        <td><%= link_to 'Edit', edit_historico_path(historico) %></td>
+        <td><%= link_to 'Destroy', historico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+>>>>>>> cb708f07a760e00f6b8459d343ab03ecdae0aee4
       </tr>
     <% end %>
   </tbody>

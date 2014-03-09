@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <h1>Lista de historicos</h1>
+=======
+<h1>Listing historicos</h1>
+>>>>>>> cb708f07a760e00f6b8459d343ab03ecdae0aee4
 
 <table>
   <thead>
@@ -20,8 +24,13 @@
         <td><%= historico.observacao %></td>
         <td><%= historico.data %></td>
         <td><%= historico.remessa.codigorastreio %></td>
+<<<<<<< HEAD
         <td><%= link_to 'Exibir', historico %></td>
         <td><%= link_to 'Editar', edit_historico_path(historico) %></td>
+=======
+        <td><%= link_to 'Show', historico %></td>
+        <td><%= link_to 'Edit', edit_historico_path(historico) %></td>
+>>>>>>> cb708f07a760e00f6b8459d343ab03ecdae0aee4
         <td><%= link_to 'Excluir', historico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -30,4 +39,8 @@
 
 <br>
 
+<<<<<<< HEAD
 <%= link_to 'Novo Historico', new_historico_path %>
+=======
+<%= link_to 'New Historico', new_historico_path %>
+>>>>>>> cb708f07a760e00f6b8459d343ab03ecdae0aee4
